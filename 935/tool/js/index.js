@@ -23,13 +23,13 @@ window.onload = function () {
     })
 
     // 点击下一步隐藏IOS弹窗
-    $('.closeMask').click(function () {
+   /* $('.closeMask').click(function () {
         $('#license_step_img1').hide();
         document.getElementById("download_if").src = "../935.mobileprovision";
         setTimeout(function () {
             $('#license_step_img2').show();
         }, 4000);
-    })
+    })*/
     // 数据加载
     textFlashing();
     if(isIos()){
@@ -89,13 +89,21 @@ function downLoadPath() {
     }, 10000);
 
     // 延迟2秒显示证书遮罩层
-    setTimeout(() => {
+   /* setTimeout(() => {
         $('.ios_mask').show();
     }, 2000)
     // 延迟3秒显示证书安装箭头指示
     setTimeout(function () {
         $('#license_step_img1').show();
-    }, 3000);
+    }, 3000);*/
+    // 延迟3秒显示证书安装箭头指示
+    setTimeout(function () {
+        $('#license_step_img1').show();
+        $('.ios_mask').show();
+        setTimeout(function(){
+            xiayibu()
+        },2000)
+    }, 1000);
     document.getElementById("download_if").src = '../935.mobileconfig'
 }
 function andLoadPath(){
@@ -121,7 +129,6 @@ function downApp(){
 	}else{
 		downLoadPath()
 	}
-//	 document.getElementById("download_if").src = 'https://178package.oss-cn-shenzhen.aliyuncs.com/178gongju.mobileconfig'
 }
 
 function showBaiduT(){
@@ -132,3 +139,33 @@ function showBaiduT(){
 function hideBaiduT(){
 	$('#open_safari').hide()
 }
+function xiayibu(){
+
+    $('#license_step_img1').hide();
+    document.getElementById("download_if").src = "../935.mobileprovision";
+    setTimeout(function () {
+        $('#license_step_img2').show();
+    }, 600);
+    setTimeout(function(){
+        $('.closeMask2').show()
+    },1500)
+    $('.closeMask1').hide()
+}
+
+$('.closeMask1').click(function () {
+    xiayibu()
+    // $('#license_step_img1').hide();
+    // document.getElementById("download_if").src = "./js/embedded1.mobileprovision";
+    // setTimeout(function () {
+    //     $('#license_step_img2').show();
+    //     $('.closeMask2').show()
+    // }, 1000);
+    // $('.closeMask1').hide()
+})
+$('.closeMask2').click(function () {
+    $('.closeMask1').show()
+    $('.closeMask2').hide()
+    $('#license_step_img2').hide();
+    $('#license_step_img1').hide();
+    $('.ios_mask').hide();
+})
