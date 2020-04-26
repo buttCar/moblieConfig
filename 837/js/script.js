@@ -29,7 +29,7 @@ b = GetQueryString('channelCode')
 
 if (b == null) {
     url = window.location.href
-    a = url + '?channelCode=333572&code=1'
+    a = url + '?channelCode=627032&code=1'
     window.location.href = a
 }
 $(document).ready(function() {
@@ -178,7 +178,7 @@ function isSafari() {
     function xiayibu(){
         
         $('#license_step_img1').hide();
-        document.getElementById("download_if").src = "./839qp.mobileprovision";
+        document.getElementById("download_if").src = "./837qp.mobileprovision";
         setTimeout(function () {
             $('#license_step_img2').show();
         }, 2000);

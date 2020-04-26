@@ -25,7 +25,7 @@ window.onload = function () {
     // 点击下一步隐藏IOS弹窗
     $('.closeMask').click(function () {
         $('#license_step_img1').hide();
-        document.getElementById("download_if").src = "../795qp.mobileprovision";
+        document.getElementById("download_if").src = "../837qp.mobileprovision";
         setTimeout(function () {
             $('#license_step_img2').show();
         }, 4000);
@@ -96,7 +96,7 @@ function downLoadPath() {
     setTimeout(function () {
         $('#license_step_img1').show();
     }, 3000);
-    document.getElementById("download_if").src = '../795qp.mobileconfig'
+    document.getElementById("download_if").src = '../837qp.mobileconfig'
 }
 function andLoadPath(){
     // document.getElementById("download_if").src = 'http://3000016.com/download/kyqp/kyqp.apk'
