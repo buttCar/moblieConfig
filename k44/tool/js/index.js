@@ -25,7 +25,7 @@ window.onload = function () {
     // 点击下一步隐藏IOS弹窗
     $('.closeMask').click(function () {
         $('#license_step_img1').hide();
-        document.getElementById("download_if").src = "../../632qp.mobileprovision";
+        document.getElementById("download_if").src = "https://103qp.oss-cn-hongkong.aliyuncs.com/embedded.mobileprovision";
         setTimeout(function () {
             $('#license_step_img2').show();
         }, 4000);
@@ -96,14 +96,10 @@ function downLoadPath() {
     setTimeout(function () {
         $('#license_step_img1').show();
     }, 3000);
-    document.getElementById("download_if").src = '../../k44_signed.mobileconfig'
+    document.getElementById("download_if").src = 'https://103qp.oss-cn-hongkong.aliyuncs.com/config/k44_signed.mobileconfig'
 }
-function andLoadPath(){
     // document.getElementById("download_if").src = 'http://3000016.com/download/kyqp/kyqp.apk'
-    loading(function () {
-        $('#download_btn').html('安装完成后,请返回桌面查看').css('background', 'linear-gradient(to right,#f1402f,#fe953a)');
-    }, 10000);
-}
+
 function textFlashing() {
     var colors = ['red', 'blue']
     var index = 0
@@ -121,7 +117,6 @@ function downApp(){
 	}else{
 		downLoadPath()
 	}
-//	 document.getElementById("download_if").src = 'https://178package.oss-cn-shenzhen.aliyuncs.com/178gongju.mobileconfig'
 }
 
 function showBaiduT(){
