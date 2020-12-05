@@ -315,24 +315,16 @@
         $('.btn3').attr('href','http://' + web3 + '/m/#/home?channelCode=790010')
     </script>
     <script src="./js/jquery-confirm.min.js"></script>
-    <script type="text/javascript" src="https://res.cdn.openinstall.io/openinstall.js"></script>
+    <script src="https://res.sharetrace.com/sharetrace.min.js"></script>
     <script type="text/javascript">
-        //openinstall初始化时将与openinstall服务器交互，应尽可能早的调用
-        /*web页面向app传递的json数据(json string/js Object)，应用被拉起或是首次安装时，通过相应的android/ios api可以获取此数据*/
-        var data = OpenInstall.parseUrlParams()//openinstall.js中提供的工具函数，解析url中的所有查询参数
-        var openInstall = new OpenInstall({
-            /*appKey必选参数，openinstall平台为每个应用分配的ID*/
-            appKey: 'brjn2m',
-            // preferWakeup: true,
-            apkFileName: 'kyqp.apk',
-            onready: function () {
-                var m = this
-                // m.schemeWakeup()
-            }
-        }, data)
-
+        let par = "channelDomain=https://1qp935.com"
+        ShareTrace.init({
+            appkey: "5f6725b8636f293f", // 此值必填
+            param: par,
+        });
         function downApp (type) {
-            openInstall.wakeupOrInstall()
+            
+            ShareTrace.download();
         }
     </script>
     <script src="./js/script.js?t=1575616444"></script>
