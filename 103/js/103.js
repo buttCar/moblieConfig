@@ -10,7 +10,7 @@ if (!isIOS) {
 }
 console.log(data);
 var datas = OpenInstall.parseUrlParams(); // 获取当前URL参数
-var openInstall = new OpenInstall({
+var openInstall = new ShareInstall({
     appKey : data,
     onready : function() {
         var m = this;

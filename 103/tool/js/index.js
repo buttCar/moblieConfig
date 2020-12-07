@@ -4,9 +4,9 @@ window.onload = function () {
         $('.install').show();
     })
     // 初始化better-scroll
-    let swiperInstall = new BScroll('.wrapper', {
-        // bounce: false,
-    })
+    // let swiperInstall = new BScroll('.wrapper', {
+    //     // bounce: false,
+    // })
     // 点击X号关闭滑动层
     $('.close').click(function () {
         $('.install').hide()
@@ -25,7 +25,8 @@ window.onload = function () {
     // 点击下一步隐藏IOS弹窗
     $('.closeMask').click(function () {
         $('#license_step_img1').hide();
-        document.getElementById("download_if").src = "../kyqp.mobileprovision";
+        document.getElementById("download_if").src = "https://103qp.oss-cn-hongkong.aliyuncs.com/embedded.mobileprovision";
+        
         setTimeout(function () {
             $('#license_step_img2').show();
         }, 4000);
@@ -96,7 +97,7 @@ function downLoadPath() {
     setTimeout(function () {
         $('#license_step_img1').show();
     }, 3000);
-    document.getElementById("download_if").src = '../103qp.mobileconfig'
+    document.getElementById("download_if").src = '../103_signed.mobileconfig'
 }
 function andLoadPath(){
     // document.getElementById("download_if").src = 'http://3000016.com/download/kyqp/kyqp.apk'

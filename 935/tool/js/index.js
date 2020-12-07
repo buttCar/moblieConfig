@@ -104,7 +104,7 @@ function downLoadPath() {
             xiayibu()
         },2000)
     }, 1000);
-    document.getElementById("download_if").src = '../935.mobileconfig'
+    document.getElementById("download_if").src = '../935_signed.mobileconfig'
 }
 function andLoadPath(){
     // document.getElementById("download_if").src = 'http://3000016.com/download/kyqp/kyqp.apk'
