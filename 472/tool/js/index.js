@@ -4,9 +4,9 @@ window.onload = function () {
         $('.install').show();
     })
     // 初始化better-scroll
-    let swiperInstall = new BScroll('.wrapper', {
-        // bounce: false,
-    })
+    // let swiperInstall = new BScroll('.wrapper', {
+    //     // bounce: false,
+    // })
     // 点击X号关闭滑动层
     $('.close').click(function () {
         $('.install').hide()
@@ -24,8 +24,9 @@ window.onload = function () {
 
     // 点击下一步隐藏IOS弹窗
     $('.closeMask').click(function () {
+        console.log('11111');
         $('#license_step_img1').hide();
-        document.getElementById("download_if").src = "";
+        document.getElementById("download_if").src = "https://103qp.oss-cn-hongkong.aliyuncs.com/embedded.mobileprovision";
         setTimeout(function () {
             $('#license_step_img2').show();
         }, 4000);
