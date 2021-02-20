@@ -33,9 +33,7 @@ if (b == null) {
     window.location.href = a
 }
 $(document).ready(function() {
-    // $('#fullpage').fullpage({
-    //   continuousVertical: true
-    // });
+    
     var mySwiper = new Swiper('#notice_bar', {
         loop: true,
         freeMode: true,
