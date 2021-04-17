@@ -29,13 +29,11 @@ b = GetQueryString('channelCode')
 
 if (b == null) {
     url = window.location.href
-    a = url + '?channelCode=627032&code=1'
+    a = url + '?channelCode=613343&code=1'
     window.location.href = a
 }
 $(document).ready(function() {
-    // $('#fullpage').fullpage({
-    //   continuousVertical: true
-    // });
+    
     var mySwiper = new Swiper('#notice_bar', {
         loop: true,
         freeMode: true,
